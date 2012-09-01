@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F171FB32-C071-4A38-BA05-61DD8B73723A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DomainApiNET</RootNamespace>
+    <AssemblyName>DomainApi.NET</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="RestSharp">
+      <HintPath>..\Dependencies\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enums\Hyphen.cs" />
+    <Compile Include="Enums\YesNo.cs" />
+    <Compile Include="Objects\APIHeader.cs" />
+    <Compile Include="Objects\DomainSuggestions\DomainSuggestion.cs" />
+    <Compile Include="Objects\DomainSuggestions\DomainSuggestionsContent.cs" />
+    <Compile Include="Objects\DomainSuggestions\DomainSuggestionsResults.cs" />
+    <Compile Include="Objects\DomainSuggestions\DomainSuggestionInfo.cs" />
+    <Compile Include="Objects\Errors\Error.cs" />
+    <Compile Include="Objects\Errors\ErrorResponse.cs" />
+    <Compile Include="Objects\HomepageThumbnail\HomepageThumbnailContent.cs" />
+    <Compile Include="Objects\HomepageThumbnail\HomepageThumbnailResponse.cs" />
+    <Compile Include="Objects\Info\CategoryData.cs" />
+    <Compile Include="Objects\Info\DomainInfoContent.cs" />
+    <Compile Include="Objects\Info\ContentData.cs" />
+    <Compile Include="Objects\Info\ContributingSubdomain.cs" />
+    <Compile Include="Objects\Info\Contribution.cs" />
+    <Compile Include="Objects\Info\Country.cs" />
+    <Compile Include="Objects\Info\DomainInfoResult.cs" />
+    <Compile Include="Enums\DomainAvailabilityType.cs" />
+    <Compile Include="Objects\Info\DomainInfo.cs" />
+    <Compile Include="Objects\Info\Keyword.cs" />
+    <Compile Include="Objects\Info\Language.cs" />
+    <Compile Include="Misc\ExtensionMethods.cs" />
+    <Compile Include="Misc\StringValueAttribute.cs" />
+    <Compile Include="Objects\Avaliability\AvailabilityContent.cs" />
+    <Compile Include="Objects\Avaliability\AvailabilityDomain.cs" />
+    <Compile Include="Objects\Info\PageViews.cs" />
+    <Compile Include="Objects\Info\PageViews2.cs" />
+    <Compile Include="Objects\Info\PerMillion.cs" />
+    <Compile Include="Objects\Info\PerUser.cs" />
+    <Compile Include="Objects\IPLookup\IPLocation.cs" />
+    <Compile Include="Objects\IPLookup\IPLookupContent.cs" />
+    <Compile Include="Objects\IPLookup\IPLookupResults.cs" />
+    <Compile Include="Objects\Errors\ParameterError.cs" />
+    <Compile Include="Objects\SecondaryMarket\SecondaryMarketDomain.cs" />
+    <Compile Include="Objects\SecondaryMarket\SecondaryMarketInfo.cs" />
+    <Compile Include="Objects\SecondaryMarket\SecondaryMarketContent.cs" />
+    <Compile Include="Objects\SecondaryMarket\SecondaryMarketResults.cs" />
+    <Compile Include="Objects\Errors\ValidatorError.cs" />
+    <Compile Include="Objects\Whois\DomainWhoisContent.cs" />
+    <Compile Include="Objects\Whois\DomainWhoisRepsonse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DomainAPI.cs" />
+    <Compile Include="Enums\Region.cs" />
+    <Compile Include="Enums\TLD.cs" />
+    <Compile Include="Objects\Info\Rank.cs" />
+    <Compile Include="Objects\Info\Reach.cs" />
+    <Compile Include="Objects\Info\Related.cs" />
+    <Compile Include="Objects\Info\RelatedLink.cs" />
+    <Compile Include="Objects\Info\SiteData.cs" />
+    <Compile Include="Objects\Info\Speed.cs" />
+    <Compile Include="Objects\Info\TimeRange.cs" />
+    <Compile Include="Objects\Info\TrafficData.cs" />
+    <Compile Include="Objects\Info\UsageStatistic.cs" />
+    <Compile Include="Enums\ThumbnailSize.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="Objects\Avaliability\AvailabilityResult.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
