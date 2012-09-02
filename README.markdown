@@ -48,4 +48,4 @@ Getting info about google.com
 Domain is in locale: en and has 4788643 links to it.
 ```
 
-For more examples, take a look at the DomainApi.NET Client included in the proejct.
+For more examples, take a look at the DomainApi.NET Client included in the project.
